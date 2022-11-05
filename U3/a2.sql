@@ -1,0 +1,14 @@
+--a
+select p.PRÜFUNGSERGEBNIS.STUDIERENDER.NAME, p.PRÜFUNGSERGEBNIS.NOTE, p.PRÜFUNGSERGEBNIS.VORLESUNG.NAME
+from PRÜFUNGSERGEBNISTAB p
+where p.PRÜFUNGSERGEBNIS.NOTE < 2.0
+and p.PRÜFUNGSERGEBNIS.VORLESUNG.NAME = 'Datenbanken';
+--b
+select f.DEKAN.NAME, s.NAME
+from FAKULTAETTAB f, STUDIERENDERTAB s
+where f.NAME = s.STUDIENGANG.FAKULTAET.NAME
+and f.DEKAN.NAME = 'Kohl'; --statt Langweg
+--c
+select f.name, p.column_value.NAME as Professor_Namen
+from FAKULTAETTAB f, table(f.PROFESSOREN) p
+where f.NAME = 'Informatik';
