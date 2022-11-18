@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Database>
+  <Setting type="32">
+    <Driver></Driver>
+    <DriverFiles></DriverFiles>
+    <Dialect></Dialect>
+    <DriverClass></DriverClass>
+    <URL></URL>
+    <UserName></UserName>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+    <HostName></HostName>
+    <PortNO></PortNO>
+    <DBName></DBName>
+    <ServiceName></ServiceName>
+    <ServerName></ServerName>
+    <SelectedForm>true</SelectedForm>
+  </Setting>
+  <Setting type="16">
+    <Driver>Oracle9i/10g (or above)</Driver>
+    <DriverFiles>C:\AIN5\DBSYS2\U4\ojdbc11.jar</DriverFiles>
+    <Dialect>org.hibernate.dialect.Oracle12cDialect</Dialect>
+    <DriverClass>oracle.jdbc.OracleDriver</DriverClass>
+    <URL>jdbc:oracle:thin:@oracle19c.in.htwg-konstanz.de:1521:ora19c</URL>
+    <UserName>dbsys52</UserName>
+    <EncryptedPassword>B3D23384B620F2F2A3C08355148FCA56</EncryptedPassword>
+    <HostName>oracle19c.in.htwg-konstanz.de</HostName>
+    <PortNO>1521</PortNO>
+    <DBName>ora19c</DBName>
+    <ServiceName></ServiceName>
+    <ServerName></ServerName>
+    <SelectedForm>false</SelectedForm>
+  </Setting>
+</Database>
