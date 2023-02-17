@@ -7,6 +7,16 @@ WHERE NOT EXISTS
      FROM pers p2
      WHERE p.anr = p2.anr
        AND p.pnr != p2.pnr);
+SELECT COUNT(p.pnr)
+FROM Pers p
+         LEFT JOIN Pers p2 ON p.anr = p2.anr AND p.pnr != p2.pnr
+WHERE p2.pnr IS NULL;
+select count(p1.pnr)
+from PERS p1,
+     PERS p2
+where p1.anr = p2.ANR
+  and p1.pnr != p2.PNR
+  and p2.PNR is null;
 -- a correct
 CREATE OR REPLACE /*MATERIALIZED*/ VIEW AbtPers AS
 SELECT a.anr, COUNT(DISTINCT p.pnr) AS anz
@@ -100,6 +110,11 @@ WHERE NOT EXISTS(SELECT *
                  FROM Pers p2
                  WHERE p1.name = p2.name
                    AND p1.pnr != p2.pnr);
+select p1.name
+from pers p1
+         left join pers p2 on p1.pnr != p2.PNR
+    and p1.name = p2.name
+where p2.pnr is null;
 -- f correct
 SELECT name
 FROM pers
